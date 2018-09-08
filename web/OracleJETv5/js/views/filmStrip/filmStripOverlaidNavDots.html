@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<style>
+  .demo-filmstrip-item {
+    box-sizing: border-box;
+    width: 100%;
+    height: 250px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    font-size: 3rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .demo-overlaid-paging-control {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+</style>
+
+<div class="oj-panel" style="margin: 20px;">
+  <div id="filmStripDiv" style="position: relative;">
+    <oj-film-strip  id="filmStrip" 
+         max-items-per-page="1"
+         arrow-visibility="hidden"
+         aria-label="Set of chemicals" 
+         data-oj-context>
+      <!-- ko foreach: chemicals -->
+      <div class="oj-panel oj-panel-alt2 demo-filmstrip-item" 
+           data-bind="style: {
+             display: getItemInitialDisplay($index())}">
+        <span data-bind="text: name"></span>
+      </div>
+      <!-- /ko -->
+    </oj-film-strip >
+    
+    <div class="demo-overlaid-paging-control">
+      <oj-paging-control id="pagingControl" 
+         data="[[pagingModel]]"
+         page-size="0"
+         page-options='{"type": "dots"}'>
+      </oj-paging-control>
+    </div>
+  </div> <!-- end filmStripDiv -->
+</div>

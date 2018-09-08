@@ -1,0 +1,133 @@
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<style>
+   #sijiewidth{width: 100%!important;}
+   .oj-textarea-input{height:100px;};
+</style>
+
+<div id="sampleDemo" style="" class="demo-padding oj-panel demo-centering-container">
+      <div id="componentDemoContent" style="width: 1px; min-width: 100%;">
+        
+        <div id="form-containe ">
+         <h3>添加人员信息</h3>
+          <hr>
+          <oj-form direction="row" class="demo-grid-sizes demo-flex-display">
+             <div class="oj-flex ">
+                
+                 <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                    <div class="oj-flex ">
+                        <div class="oj-flex-item oj-sm-3">
+                            <oj-label for="control2" show->姓名</oj-label>
+                        </div>
+                        <div class="oj-flex-item oj-sm-9">
+                          <oj-input-text id="control2"  value="" placeholder="请添加姓名"></oj-input-text>
+                        </div>
+                    </div>
+                </div>
+                 <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                    <div class="oj-flex ">
+                        <div class="oj-flex-item oj-sm-3">
+                            <oj-label for="control3" show->账号</oj-label>
+                        </div>
+                        <div class="oj-flex-item oj-sm-9">
+                          <oj-input-text id="control3"  value="" placeholder="请添加账号"></oj-input-text>
+                        </div>
+                    </div>
+                 </div>
+                 <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                    <div class="oj-flex ">
+                        <div class="oj-flex-item oj-sm-3">
+                            <oj-label for="control4" show->密码</oj-label>
+                        </div>
+                        <div class="oj-flex-item oj-sm-9">
+                          <oj-input-text id="control4"  value="" placeholder="请添加密码"></oj-input-text>
+                        </div>
+                    </div>
+                 </div> 
+             </div>  
+              
+              <div class="oj-flex ">
+                <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                    <div class="oj-flex">
+                        <div class="oj-flex-item oj-sm-3">
+                            <oj-label for="control4" show->性别</oj-label>
+                        </div>
+                        <div class="oj-flex-item oj-sm-9">
+                                    <oj-select-one id="select1" style="width:252px;"
+                                                   options="{{browsersDP1}}" 
+                                                   value="{{selectVal1}}">
+                                    </oj-select-one>
+                                   
+                                    <div class="employee_hidden">
+                                      <label for="selectedval">Current selected value is</label>
+                                      <span id="selectedval1" data-bind="text: selectVal1"></span>
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                    <div class="oj-flex ">
+                        <div class="oj-flex-item oj-sm-3">
+                            <oj-label for="control5" show->角色</oj-label>
+                        </div>
+                        <div class="oj-flex-item oj-sm-9">
+                                    <oj-select-one id="select1" style="width:252px;"
+                                                   options="{{browsersDP2}}" 
+                                                   value="{{selectVal2}}">
+                                    </oj-select-one>
+                                    
+                                    <div class="employee_hidden">
+                                      <label for="selectedval">Current selected value is</label>
+                                      <span id="selectedval2" data-bind="text: selectVal2"></span>
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                    <div class="oj-flex ">
+                        <div class="oj-flex-item oj-sm-3">
+                            <oj-label for="control6" show->所属部门</oj-label>
+                        </div>
+                        <div class="oj-flex-item oj-sm-9">
+                                    <oj-select-one id="select1" style="width:252px;"
+                                                   options="{{browsersDP3}}" 
+                                                   value="{{selectVal3}}">
+                                    </oj-select-one>
+                                    <div class="employee_hidden">
+                                      <label for="selectedval">Current selected value is</label>
+                                      <span id="selectedval3" data-bind="text: selectVal3"></span>
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+             </div>  
+            </div>
+            <hr>
+            <oj-label-value>
+               <div class="oj-flex ">
+                   <div class="oj-flex-item oj-sm-5"></div>
+                   <div class="oj-flex-item oj-sm-7">
+                    <oj-button  slot="value" onclick="save_employee()">保存</oj-button>
+                    <oj-button  slot="value" onclick="reset_employee()">返回</oj-button>
+                   </div>
+              </div>
+            </oj-label-value>
+          </oj-form>
+        </div>
+      </div>
+<style>
+    .employee_hidden{display: none;}
+</style>
+   
+    
+
+

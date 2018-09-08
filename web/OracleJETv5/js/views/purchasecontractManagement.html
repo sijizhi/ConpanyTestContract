@@ -1,0 +1,54 @@
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<style>
+    .clearfix:after{
+        display: block;
+        visibility: hidden;
+        clear: both;
+        height: 0;
+        content: ".";
+    }
+    .clearfix{
+        zoom: 1;
+    }
+</style>
+    <div id="sampleDemo" style="" class="demo-padding demo-container">
+      <div id="componentDemoContent" style="width: 1px; min-width: 100%;">
+        
+        <div id="parentDiv">
+        
+          <!-- outer offcanvas wrapper -->
+          <div class="oj-offcanvas-outer-wrapper" 
+               style="border: 1px solid #d1e6f9; height:600px; width:100%">
+        
+            <!-- start offcanvas -->
+            <div id="drawer" 
+                 class="oj-offcanvas-start oj-panel oj-panel-alt1" 
+                 style="width: 10%">
+              <oj-defer>
+                <div id="drawerContent" 
+                     data-bind="ojModule: 'ojOffcanvas-deferredRendering/content4'"></div>
+              </oj-defer>
+            </div>
+        
+            <!-- main content -->
+            <div id="main" style="padding: 10px; height: 100%" class="clearfix">
+              <!-- start offcanvas launch button -->
+              <oj-button display='icons' chroming='half' style="display: inline-block;float: left"
+                         on-oj-action='[[toggleDrawer]]'>
+                <span slot='startIcon' class='oj-fwk-icon-hamburger oj-fwk-icon' id="acc"></span>
+                Toggle start offcanvas
+              </oj-button>
+              <iframe id="iframe_1" style="display: block;width:80%;height:100%;margin-top:-100px" src="http://localhost:8383/OracleJETv5/index.html?root=purchasecontract" frameborder='no'  border='0'  marginwidth='0'  marginheight='0'  scrolling='no'></iframe>
+            
+            </div>
+        
+          </div>
+        </div>
+
+        
+      </div>
+    </div>

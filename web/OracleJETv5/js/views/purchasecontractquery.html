@@ -1,0 +1,197 @@
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<style>
+   #sijiewidth{width: 100%!important;}
+   .oj-textarea-input{height:100px;};
+</style>
+<div id="sampleDemo" style="" class="demo-padding oj-panel demo-centering-container">
+      <div id="componentDemoContent" style="width: 1px; min-width: 100%;">
+        <div id="form-containe ">
+         <h3>查看采购合同信息</h3>
+          <hr>
+          <oj-form direction="row" class="demo-grid-sizes demo-flex-display">
+             <div class="oj-flex ">
+                 <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                    <div class="oj-flex ">
+                        <div class="oj-flex-item oj-sm-3">
+                            <oj-label for="control2" show->创建人</oj-label>
+                        </div>
+                        <div class="oj-flex-item oj-sm-9">
+                          <oj-input-text id="createUser"  value="管理员" disabled="disabled"></oj-input-text>
+                        </div>
+                    </div>
+                </div>
+                 <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                    <div class="oj-flex ">
+                        <div class="oj-flex-item oj-sm-3">
+                            <oj-label for="control3" show->创建部门</oj-label>
+                        </div>
+                        <div class="oj-flex-item oj-sm-9">
+                          <oj-input-text id="createDept"  value="采购部" disabled="disabled"></oj-input-text>
+                        </div>
+                    </div>
+                 </div>
+                 <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                    <div class="oj-flex ">
+                        <div class="oj-flex-item oj-sm-3">
+                            <oj-label for="control4" show->创建时间</oj-label>
+                        </div>
+                        <div class="oj-flex-item oj-sm-9">
+                           <oj-input-text id="controllcreateDate"  value="" disabled="disabled"></oj-input-text>
+                        </div>
+                    </div>
+                 </div> 
+             </div>  
+              
+              <div class="oj-flex ">
+                 <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                    <div class="oj-flex ">
+                        <div class="oj-flex-item oj-sm-3">
+                            <oj-label for="control3" show->公司名称</oj-label>
+                        </div>
+                        <div class="oj-flex-item oj-sm-9">
+                          <oj-input-text id="controlName"  value="" disabled="disabled"></oj-input-text>
+                        </div>
+                    </div>
+                 </div>
+                 <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                    <div class="oj-flex ">
+                        <div class="oj-flex-item oj-sm-3">
+                            <oj-label for="control4" show->公司地址</oj-label>
+                        </div>
+                        <div class="oj-flex-item oj-sm-9">
+                            <oj-input-text id="controlAddres"  value="" disabled="disabled"></oj-input-text>
+                        </div>
+                    </div>
+                 </div> 
+                  <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                          <div class="oj-flex ">
+                              <div class="oj-flex-item oj-sm-3">
+                                  <oj-label for="control2" show->已付款金额</oj-label>
+                              </div>
+                              <div class="oj-flex-item oj-sm-9">
+                                <oj-input-text id="paymoney"  value="" disabled="disabled"></oj-input-text>
+                              </div>
+                          </div>
+                      </div>
+             </div> 
+              
+              <div class="oj-flex ">
+                <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                    <div class="oj-flex">
+                        <div class="oj-flex-item oj-sm-3">
+                            <oj-label for="control4" show->物料名称</oj-label>
+                        </div>
+                        <div class="oj-flex-item oj-sm-9">
+                                <oj-input-text id="materialName"  value="" disabled="disabled"></oj-input-text>
+                        </div>
+                    </div>
+                </div>
+                 <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                    <div class="oj-flex ">
+                        <div class="oj-flex-item oj-sm-3">
+                            <oj-label for="control5" show->进货价</oj-label>
+                        </div>
+                        <div class="oj-flex-item oj-sm-9">
+                                <oj-input-text id="importPrice"  value="" disabled="disabled"></oj-input-text>
+                        </div>
+                    </div>
+                </div>
+                 <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                    <div class="oj-flex ">
+                        <div class="oj-flex-item oj-sm-3">
+                            <oj-label for="control6" show->进货量</oj-label>
+                        </div>
+                        <div class="oj-flex-item oj-sm-9">
+                            <oj-input-text id="importAmount"  value="" disabled="disabled"></oj-input-text>
+                        </div>
+                    </div>
+                </div>
+             </div>
+              <div class="oj-flex ">
+                    <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                          <div class="oj-flex ">
+                              <div class="oj-flex-item oj-sm-3">
+                                  <oj-label for="control2" show->合同名称</oj-label>
+                              </div>
+                              <div class="oj-flex-item oj-sm-9">
+                                <oj-input-text id="contractName"  value="" disabled="disabled"></oj-input-text>
+                              </div>
+                          </div>
+                      </div>
+                  
+                   <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                          <div class="oj-flex ">
+                              <div class="oj-flex-item oj-sm-3">
+                                  <oj-label for="control2" show->采购人</oj-label>
+                              </div>
+                              <div class="oj-flex-item oj-sm-9">
+                                <oj-input-text id="importPeople"  value="" disabled="disabled"></oj-input-text>
+                              </div>
+                          </div>
+                    </div>
+                    
+                    <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                          <div class="oj-flex ">
+                              <div class="oj-flex-item oj-sm-3">
+                                  <oj-label for="control2" show->修改人</oj-label>
+                              </div>
+                              <div class="oj-flex-item oj-sm-9">
+                                <oj-input-text id="modifyName"  value="" disabled="disabled"></oj-input-text>
+                              </div>
+                          </div>
+                      </div>
+                  
+                </div>
+              <div class="oj-flex ">
+                  <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                          <div class="oj-flex ">
+                              <div class="oj-flex-item oj-sm-3">
+                                  <oj-label for="control2" show->修改时间</oj-label>
+                              </div>
+                              <div class="oj-flex-item oj-sm-9">
+                                <oj-input-text id="modifydate"  value="" disabled="disabled"></oj-input-text>
+                              </div>
+                          </div>
+                      </div>
+              </div>
+              
+              
+              <div class="oj-flex ">
+                    <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                          <div class="oj-flex ">
+                              <div class="oj-flex-item oj-sm-3">
+                                  <oj-label for="control2" show->备注</oj-label>
+                              </div>
+                               <oj-text-area id="text-area" value="" disabled="disabled">
+                               </oj-text-area>
+                          </div>
+                      </div>
+                </div>
+            </div>
+            <hr>
+            <oj-label-value>
+               <div class="oj-flex ">
+                   <div class="oj-flex-item oj-sm-5"></div>
+                   <div class="oj-flex-item oj-sm-7">
+                    <oj-button  slot="value" onclick="reset_purchase()">返回</oj-button>
+                   </div>
+              </div>
+            </oj-label-value>
+          </oj-form>
+        </div>
+      </div>
+
+   
+    
+
+

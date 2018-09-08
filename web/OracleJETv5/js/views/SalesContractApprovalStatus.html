@@ -1,0 +1,167 @@
+<style>
+    #sijiewidth{width: 100%!important;}
+    .oj-textarea-input{height:100px;};
+
+</style>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<div id="sampleDemo" style="" class="demo-padding oj-panel demo-centering-container">
+    <div id="componentDemoContent" style="width: 1px; min-width: 100%;">
+
+        <div id="form-containe ">
+            <h3>销售合同审批</h3>
+            <hr>
+            <oj-form direction="row" class="demo-grid-sizes demo-flex-display">
+                <div class="oj-flex ">
+                    <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                        <div class="oj-flex">
+                            <div class="oj-flex-item oj-sm-3">
+                                <oj-label for="control1" show->创建人</oj-label>
+                            </div>
+                            <div class="oj-flex-item oj-sm-9">
+                                <oj-input-text id="control1" class="createUser"  name="createUser" disabled="disabled"></oj-input-text>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                        <div class="oj-flex">  
+                            <div class="oj-flex-item oj-sm-3">
+                                <oj-label for="control1" >创建时间</oj-label>
+                            </div>
+                            <div class="oj-flex-item oj-sm-9">
+                                <oj-input-text id="control1" class="createDate" value="2018-08-08" disabled="disabled"></oj-input-text>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                        <div class="oj-flex">  
+                            <div class="oj-flex-item oj-sm-3">
+                                <oj-label for="control1" >公司名称</oj-label>
+                            </div>
+                            <div class="oj-flex-item oj-sm-9">
+                                <oj-input-text id="control1" class="companyName" value="2018-08-08" disabled="disabled"></oj-input-text>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="oj-flex ">
+                    <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                        <div class="oj-flex ">
+                            <div class="oj-flex-item oj-sm-3">
+                                <oj-label for="control1" show->产品名称</oj-label>
+                            </div>
+                            <div class="oj-flex-item oj-sm-9">
+                                <oj-input-text id=""  class="productName"  disabled="disabled"></oj-input-text>
+                            </div>     
+                        </div>
+                    </div>
+                    <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                        <div class="oj-flex ">
+                            <div class="oj-flex-item oj-sm-3">
+                                <oj-label for="control1" show->成本价</oj-label>
+                            </div>
+                            <div class="oj-flex-item oj-sm-9">
+                                <oj-input-text id="control1" class="cost"  placeholder=""  disabled="disabled"></oj-input-text>
+                            </div>     
+                        </div>
+                    </div>
+                    <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                        <div class="oj-flex">  
+                            <div class="oj-flex-item oj-sm-3">
+                                <oj-label for="control1" >建议售价</oj-label>
+                            </div>
+                            <div class="oj-flex-item oj-sm-9">
+                                <oj-input-text id="control1" class="price" placeholder="" disabled="disabled"></oj-input-text>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="oj-flex ">
+                    <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                        <div class="oj-flex">
+                            <div class="oj-flex-item oj-sm-3">
+                                <oj-label for="control1" show->销售价</oj-label>
+                            </div>
+                            <div class="oj-flex-item oj-sm-9">
+                                <oj-input-text id="control1" class="salePrice" placeholder="" disabled="disabled"></oj-input-text>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                        <div class="oj-flex ">
+                            <div class="oj-flex-item oj-sm-3">
+                                <oj-label for="control1" show->销售量</oj-label>
+                            </div>
+                            <div class="oj-flex-item oj-sm-9">
+                                <oj-input-text id="control1" class="amount"  placeholder="" disabled="disabled"></oj-input-text>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                        <div class="oj-flex ">
+                            <div class="oj-flex-item oj-sm-3">
+                                <oj-label for="control1" show->销售总额</oj-label>
+                            </div>
+                            <div class="oj-flex-item oj-sm-9">
+                                <oj-input-text id="control1" class="totalSales"  placeholder="" disabled="disabled"></oj-input-text>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="oj-flex " >
+                                        <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                        <div class="oj-flex ">
+                            <div class="oj-flex-item oj-sm-3">
+                                <oj-label for="control1" show->利润值</oj-label>
+                            </div>
+                            <div class="oj-flex-item oj-sm-9">
+                                <oj-input-text id="control1" class="earnedValue"  placeholder="" disabled="disabled"></oj-input-text>
+                            </div>
+
+                        </div>
+                    </div>
+                                        <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                        <div class="oj-flex ">
+                            <div class="oj-flex-item oj-sm-3">
+                                <oj-label for="control1" show->利润率</oj-label>
+                            </div>
+                            <div class="oj-flex-item oj-sm-9">
+                                <oj-input-text id="control1" class="profitMargin"  placeholder="" disabled="disabled"></oj-input-text>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="oj-sm-12 oj-md-12 oj-lg-12 oj-flex-item oj-md-labels-inline">
+                        <div class="oj-flex ">
+                            <div class="oj-flex-item oj-sm-3 oj-md-1">
+                                <oj-label for="control1" show->备注</oj-label>
+                            </div>
+                            <div class="oj-flex-item oj-sm-9 oj-md-11" >
+                                <oj-text-area id="control1" class="remarks"  placeholder="请输入备注" disabled="disabled"></oj-text-area>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <oj-label-value>
+                    <div class="oj-flex ">
+                        <div class="oj-flex-item oj-sm-5"></div>
+                        <div class="oj-flex-item oj-sm-7">
+                            <oj-button  slot="value" onclick="beapproved()">通过审批</oj-button>
+                            <oj-button  slot="value" onclick="refusedapproval()">拒绝审批</oj-button>
+                            <oj-button  slot="value" onclick="approvalback()">返回</oj-button>
+                        </div>
+                    </div>
+                </oj-label-value>
+            </oj-form>
+        </div>
+
+    </div>
+</div>

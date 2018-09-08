@@ -1,0 +1,214 @@
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<style>
+   #sijiewidth{width: 100%!important;}
+   .oj-textarea-input{height:100px;};
+</style>
+<div id="sampleDemo" style="" class="demo-padding oj-panel demo-centering-container">
+      <div id="componentDemoContent" style="width: 1px; min-width: 100%;">
+        <div id="form-containe ">
+         <h3>添加采购合同信息</h3>
+          <hr>
+          <oj-form direction="row" class="demo-grid-sizes demo-flex-display">
+             <div class="oj-flex ">
+                 <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                    <div class="oj-flex ">
+                        <div class="oj-flex-item oj-sm-3">
+                            <oj-label for="control2" show->创建人</oj-label>
+                        </div>
+                        <div class="oj-flex-item oj-sm-9">
+                          <oj-input-text id="createUser"  value="{{userName}}" disabled="disabled"></oj-input-text>
+                        </div>
+                    </div>
+                </div>
+                 <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                    <div class="oj-flex ">
+                        <div class="oj-flex-item oj-sm-3">
+                            <oj-label for="control3" show->创建部门</oj-label>
+                        </div>
+                        <div class="oj-flex-item oj-sm-9">
+                          <oj-input-text id="createDept"  value="采购部" disabled="disabled"></oj-input-text>
+                        </div>
+                    </div>
+                 </div>
+                 <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                    <div class="oj-flex ">
+                        <div class="oj-flex-item oj-sm-3">
+                            <oj-label for="control4" show->创建时间</oj-label>
+                        </div>
+                        <div class="oj-flex-item oj-sm-9">
+                          <oj-input-date id="date" value='{{valuetime}}' disabled="disabled">
+                            </oj-input-date>
+
+                            <br/><br/>
+                            <div class="employee_hidden">
+                                <span class="oj-label">Current component value is: </span>
+                                <span  id="createDate" data-bind="text: valuetime"></span>
+                            </div>
+                        </div>
+                    </div>
+                 </div> 
+             </div>  
+              
+              <div class="oj-flex ">
+                 <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                    <div class="oj-flex ">
+                        <div class="oj-flex-item oj-sm-3">
+                            <oj-label for="control2" show->供应商编号</oj-label>
+                        </div>
+                        <div class="oj-flex-item oj-sm-9">
+                                    <oj-select-one id="select12" style="width:252px;"
+                                                   options="{{browsersDP1}}" 
+                                                   value="{{selectVal1}}" >
+                                    </oj-select-one>
+                                    <div class="employee_hidden">
+                                      <label for="selectedval">Current selected value is</label>
+                                      <oj-input-text id="providerId"  data-bind="value: selectVal1.slice(2,3)" style="display:none"></oj-input-text>
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                    <div class="oj-flex ">
+                        <div class="oj-flex-item oj-sm-3">
+                            <oj-label for="control3" show->公司名称</oj-label>
+                        </div>
+                        <div class="oj-flex-item oj-sm-9">
+                          <oj-input-text id="controlName"  data-bind="value: selectVal1.slice(1,2)" disabled="disabled"></oj-input-text>
+                        </div>
+                    </div>
+                 </div>
+                 <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                    <div class="oj-flex ">
+                        <div class="oj-flex-item oj-sm-3">
+                            <oj-label for="control4" show->公司地址</oj-label>
+                        </div>
+                        <div class="oj-flex-item oj-sm-9">
+                            <oj-input-text id="controlAddres"  data-bind="value: selectVal1.slice(0,1)" disabled="disabled"></oj-input-text>
+                        </div>
+                    </div>
+                 </div> 
+             </div> 
+              
+              <div class="oj-flex ">
+                <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                    <div class="oj-flex">
+                        <div class="oj-flex-item oj-sm-3">
+                            <oj-label for="control4" show->物料名称</oj-label>
+                        </div>
+                        <div class="oj-flex-item oj-sm-9">
+                                    <oj-select-one id="select1" style="width:252px;"
+                                                   options="{{browsersDP2}}" 
+                                                   value="{{selectVal2}}">
+                                    </oj-select-one>
+                                   
+                                    <div class="employee_hidden">
+                                      <label for="selectedval">Current selected value is</label>
+                                      <span id="selectedval2" data-bind="text: selectVal2"></span>
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                    <div class="oj-flex ">
+                        <div class="oj-flex-item oj-sm-3">
+                            <oj-label for="control5" show->进货价</oj-label>
+                        </div>
+                        <div class="oj-flex-item oj-sm-9">
+                                <oj-input-text id="importPrice"  value="" placeholder="请输入进货价格"></oj-input-text>
+                        </div>
+                    </div>
+                </div>
+                 <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                    <div class="oj-flex ">
+                        <div class="oj-flex-item oj-sm-3">
+                            <oj-label for="control6" show->进货量</oj-label>
+                        </div>
+                        <div class="oj-flex-item oj-sm-9">
+                            <oj-input-text id="importAmount"  value="" placeholder="请输入进货数量"></oj-input-text>
+                        </div>
+                    </div>
+                </div>
+             </div>
+              <div class="oj-flex ">
+                    <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                          <div class="oj-flex ">
+                              <div class="oj-flex-item oj-sm-3">
+                                  <oj-label for="control2" show->合同名称</oj-label>
+                              </div>
+                              <div class="oj-flex-item oj-sm-9">
+                                <oj-input-text id="contractName"  value="" placeholder="请填写合同名称"></oj-input-text>
+                              </div>
+                          </div>
+                      </div>
+                  
+                   <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                          <div class="oj-flex ">
+                              <div class="oj-flex-item oj-sm-3">
+                                  <oj-label for="control2" show->采购人</oj-label>
+                              </div>
+                              <div class="oj-flex-item oj-sm-9">
+                                <oj-input-text id="importPeople"  value="" placeholder="请填写采购人员姓名"></oj-input-text>
+                              </div>
+                          </div>
+                      </div>
+                  
+                  <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                          <div class="oj-flex ">
+                              <div class="oj-flex-item oj-sm-3">
+                                  <oj-label for="control2" show->已付款金额</oj-label>
+                              </div>
+                              <div class="oj-flex-item oj-sm-9">
+                                <oj-input-text id="paymoney"  value="" placeholder="请填写已付款金额"></oj-input-text>
+                              </div>
+                          </div>
+                      </div>
+                </div>
+              
+              <div class="oj-flex ">
+                    <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                          <div class="oj-flex ">
+                              <div class="oj-flex-item oj-sm-3">
+                                  <oj-label for="control2" show->备注</oj-label>
+                              </div>
+                               <oj-text-area id="text-area" class="remark_value" value="{{valueremark}}">
+                               </oj-text-area>
+                                <br/><br/>
+                                <div class="employee_hidden">
+                                     <span class="oj-label">Current component value is:</span>
+                                    <span id="valueremark" data-bind="text: valueremark"></span>
+                                </div>
+                          </div>
+                      </div>
+                </div>
+            </div>
+            <hr>
+            <oj-label-value>
+               <div class="oj-flex ">
+                   <div class="oj-flex-item oj-sm-5"></div>
+                   <div class="oj-flex-item oj-sm-7">
+                    <oj-button  slot="value" onclick="save_purchase()">保存</oj-button>
+                    <oj-button  slot="value" onclick="reset_purchase()">返回</oj-button>
+                   </div>
+              </div>
+            </oj-label-value>
+          </oj-form>
+        </div>
+      </div>
+<style>
+    .employee_hidden{display: none;}
+</style>
+
+   
+    
+
+

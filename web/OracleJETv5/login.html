@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html style="height:100%;background:url(css/images/contract_login.png) no-repeat;background-size:cover;">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="#" />
+        <script src="js/jquery-2.2.4.min.js" type="text/javascript"></script>
+        <script src="js/jquery.cookie.js" type="text/javascript"></script>
+        <style>
+            input:-webkit-autofill {
+                -webkit-box-shadow: 0 0 0 1000px white inset !important;
+            }
+        </style>
+        <script>
+            $(function () {
+                
+               
+                function login() {
+                    var userCode = $("#userCode").val();
+                    var userPassword = $("#userPassword").val();
+                    if (userCode.length == 0) {
+                        alert("账户不能为空");
+                    } else if (userPassword.length == 0) {
+                        alert("密码不能为空");
+                    } else {
+                        $.ajax({
+                            url: "http://localhost:8081/contract/doLogin",
+                            type: "post",
+                            datatype: "json",
+                            data: {userCode: userCode, userPassword: userPassword},
+                            async: false,
+                            success: function (data) {
+                                if (data.result == "false") {
+                                    alert("账号或密码有误！");
+                                  
+                                } else {
+//                                    console.log(data.result);
+//                                    alert(data.result.toString());
+                                    var date = new Date();
+                                    date.setTime(date.getTime()+1*60*1000);//前端cookie 1分钟
+                                    $.cookie('the_cookie',data.result.toString(), { expires: date, path: "/"});
+                                   // var test= $.cookie('the_cookie');
+                                   // console.log(test);
+                                   // alert(test);
+                                    window.location.href = "http://localhost:8383/OracleJETv5/index.html";
+                                }
+
+                            }
+                        });
+                    }
+                }
+                $("#login").click(function () {
+                    login();
+                });
+                $("#userPassword").keypress(function (event) {
+                    var keynum = (event.keyCode ? event.keyCode : event.which);
+                    if (keynum == 13) {
+                        login();
+                    }
+                })
+            });
+        </script>
+    </head>
+    <body>
+        <div class="" style="width:100%;margin:0px auto;">
+            <div style="text-align: center;margin-top:200px;font-size:28px;margin-bottom: 20px;margin-left:3%;color:black;font-weight: 700"><img src="css/images/contract_icon.png" style="height: 50px;width: 50px;position: relative;top: 15px;right: 10px">合同管理系统</div>
+            <div style="background:white;width:40%;padding:20px;margin-left:30%;border-raidus:20px;opacity: 0.8;border-radius: 20px">
+                <div style="text-align: center;margin-top:2%">
+                    <label for="username" style="background: #79afff;padding:10px 20px;border-radius: 5px;color:white;font-weight: 700">帐户</label>
+                    <input type="text" placeholder="帐户" name="userCode" id="userCode" style="height:35px;width:300px;position: relative;bottom: 2px;text-align: center;padding-right: 20px;"/>
+                </div>
+                <div style="text-align: center;margin-top:2%">
+                    <label for="password" style="background: #79afff;padding:10px 20px;border-radius: 5px;color:white;font-weight: 700">密码</label>
+                    <input type="password" placeholder="密码" name="userPassword" id="userPassword" style="height:35px;width:300px;position: relative;bottom: 2px;text-align: center;padding-right: 20px;"/>
+                </div>
+                <div id="login" style="text-align: center;background:#79afff;width:60%;margin-left:19%;border-radius: 10px;color:white;font-weight: 700;margin-top: 2%;padding: 10px">
+                    登录   
+                </div> 
+            </div>
+        </div>
+    </body>
+</html>

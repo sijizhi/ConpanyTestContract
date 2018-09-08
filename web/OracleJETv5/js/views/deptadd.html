@@ -1,0 +1,45 @@
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<style>
+   #sijiewidth{width: 100%!important;}
+   .oj-textarea-input{height:100px;};
+</style>
+
+<div id="sampleDemo" style="" class="demo-padding oj-panel demo-centering-container">
+      <div id="componentDemoContent" style="width: 1px; min-width: 100%;">
+        
+        <div id="form-containe ">
+         <h3>添加部门信息</h3>
+          <hr>
+          <oj-form direction="row" class="demo-grid-sizes demo-flex-display">
+             <div class="oj-flex ">
+                 <div class="oj-sm-12 oj-md-4 oj-lg-4 oj-flex-item oj-md-labels-inline">
+                    <div class="oj-flex ">
+                        <div class="oj-flex-item oj-sm-3">
+                            <oj-label for="control2" show->部门名称</oj-label>
+                        </div>
+                        <div class="oj-flex-item oj-sm-9">
+                          <oj-input-text id="control2"  value="" placeholder="请输入添加的名称"></oj-input-text>
+                        </div>
+                    </div>
+                </div>
+             </div>  
+            </div>
+            <hr>
+            <oj-label-value>
+               <div class="oj-flex ">
+                   <div class="oj-flex-item oj-sm-5"></div>
+                   <div class="oj-flex-item oj-sm-7">
+                    <oj-button  slot="value" onclick="save_adddept()">保存</oj-button>
+                    <oj-button  slot="value" onclick="reset_dept()">取消</oj-button>
+                   </div>
+              </div>
+            </oj-label-value>
+          </oj-form>
+        </div>
+      </div>
+    </div>
+

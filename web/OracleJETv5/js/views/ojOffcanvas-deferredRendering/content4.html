@@ -1,0 +1,20 @@
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<div id='navlistdemo'>
+  <oj-navigation-list data='[[dataSource]]'
+                      item.renderer='[[oj.KnockoutTemplateUtils.getRenderer("server_template", true)]]'
+                      >
+  </oj-navigation-list>
+</div>
+<script type='text/html' id='server_template'>
+    <li data-bind='attr:{id : $data["id"]}'>
+        <a href='#'>
+            <span id="lo1" data-bind='text: $data["name"]' onclick="choicefive(this)"></span>
+        </a>
+  </li> 
+</script>
+

@@ -1,0 +1,56 @@
+<!--
+ Copyright (c) 2014, 2018, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-hybrid-padding">
+ <div id="sampleDemo" style="" class="demo-padding demo-container">
+      <div id="componentDemoContent" style="width: 1px; min-width: 100%;">
+          <script src="../diagramLayouts/DemoGridLayout.js" type="text/javascript"></script>
+          <script src="../diagramLayouts/DemoLayoutSupport.js" type="text/javascript"></script>
+        <div id='diagram-container'>
+          <div style="max-width: 500px; width: 50%; height: 350px; float: left;border:1px solid #d6dfe6;">
+            <div style="color: #535353; font-weight: bolder;">Diagram A</div>
+            <oj-diagram id='diagram1'
+              data = '[[data1]]'
+              layout = '[[gridLayout]]'
+              node-properties = '[[function(data){return data;}]]'
+              dnd.drag.nodes.data-types = '["text/nodes1"]'
+              dnd.drop.background.data-types = '["text/nodes1", "text/nodes2"]'
+              dnd.drop.background.drop = '[[onDrop1]]'
+              style='max-width: 500px;height: 300px;'>
+            </oj-diagram>
+          </div>
+          <div style="max-width: 500px; width: 50%; height: 350px; float: left;border:1px solid #d6dfe6;">
+            <div style="color: #535353; font-weight: bolder;">Diagram B</div>
+            <oj-diagram id='diagram2'
+              data = '[[data2]]'
+              layout = '[[dropLayout]]'
+              node-properties = '[[function(data){return data;}]]'
+              link-properties = '[[function(data){return data;}]]'
+              dnd.drag.nodes.data-types = '["text/nodes2"]'
+              dnd.drop.background.data-types = '["text/nodes1", "text/nodes2"]'
+              dnd.drop.background.drop = '[[onDrop2]]'
+              dnd.drop.nodes.data-types = '["text/nodes1", "text/nodes2"]'
+              dnd.drop.nodes.drop = '[[onDrop2]]'
+              dnd.drop.links.data-types = '["text/nodes1", "text/nodes2"]'
+              dnd.drop.links.drop = '[[onLinkDrop]]'
+              panning = 'auto'
+              min-zoom = '1'
+              max-zoom = '1'
+              style='max-width: 500px;height: 300px;'>
+            <oj-menu slot="contextMenu" style="display:none" aria-label="Edit" 
+                on-oj-action="[[menuItemAction]]"
+                on-oj-before-open="[[beforeOpenFunction]]">
+                <oj-option value="action1">Action 1</oj-option>
+                <oj-option value="action2">Action 2</oj-option>
+                <oj-option value="action3">Action 3</oj-option>
+            </oj-menu>
+            </oj-diagram>
+          </div>
+          <br style="clear:both;"/>
+        </div>
+
+        
+      </div>
+    </div>
+</div>

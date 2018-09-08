@@ -1,0 +1,83 @@
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<div id="deptmanage">
+    <div class="deptId" style="display: none"></div>
+    <h2>销售合同审批</h2>
+    <div id="sampleDemo" style="" class="demo-padding demo-container">
+      <div id="componentDemoContent" style="width: 1px; min-width: 100%;">
+          <ul id="main">
+              <li id="selectionButton3" class="selectionCurrent3" style="display:none" ><a href="#">新增</a></li>
+              <li id="selectionButton1" class="selectionCurrent1"><a href="#">审批</a></li>
+          </ul>
+          
+          <ul></ul>
+       <div id="sampleDemo" style="" class="demo-padding demo-container">
+       <div id="componentDemoContent" style="width: 1px; min-width: 100%;">
+        
+        <oj-table id="table" aria-label="Departments Table"
+                                        data='[[datasource]]' 
+                                        selection-mode='{"row": "multiple", "column": "multiple"}' 
+                                        columns='{{columnArray}}'
+                                        style='width: 100%; height:100%;'>
+            <oj-paging-control id="paging" data='[[datasource]]' page-size='5' slot='bottom'></oj-paging-control>
+        </oj-table>
+           
+        <script type="text/html" id="checkbox_tmpl">
+                <td>
+                    <oj-checkboxset aria-hidden='true'
+                                    value='{{$context.row.Selected}}'
+                                    class='oj-checkboxset-no-chrome'
+                                    data-bind="attr:{ id: 'table_checkboxset' + $context.cellContext.status.rowIndex}">
+                        <oj-option data-bind="attr:{id: 'table_checkbox' + $context.cellContext.status.rowIndex}" value="checked"></oj-option>
+                    </oj-checkboxset>
+                </td>
+        </script>
+        
+        <script type="text/html" id="checkbox_hdr_tmpl">
+                <td>
+                    <oj-checkboxset value='[false]'
+                                    on-value-changed='[[$parent.selectAllListener]]'
+                                    id="table_checkboxset_hdr"
+                                    class='oj-checkboxset-no-chrome'>
+                      <oj-option id="table_checkbox_hdr" value="checked"></oj-option>
+                    </oj-checkboxset>
+                </td>
+           </script>
+         <br><br>
+         <button id="selectionButton1" class="btn" type="button" on-click='[[currentSelection1]]'>确定当前选项</button>   
+         <button id="selectionButton3" class="btn" type="button" on-click='[[currentSelection3]]'>确定当前选项</button>
+        <br>
+      </div>
+    </div>
+    </div>
+    </div>
+</div>
+<style>
+    #main{width: 600px;height:32px;border:0px solid black;margin-top:3%;margin-bottom: 3%}
+    #main li{list-style: none;width:60px;height:30px;border:1px solid lightgray;float:left;text-align: center;line-height: 30px;margin-left: 10px;border-radius:5px;}
+    #butt{width:100px;height:30px;border:1px solid lightgray;}
+    #pagingControlDemo{margin-left:15%}
+    h2{margin-left:2%}
+    .btn{display: none;}
+</style>
+<script>
+    $(function(){
+        //新增
+        $("#selectionButton3").click(function(){
+            location.replace("http://localhost:8383/OracleJETv5/index.html?root=SalesContractApprovalAdd");   
+        });  
+         //审批
+        $("#selectionButton1").click(function(){
+            var indexValue= $('.selectionCurrent1').val();
+            if(indexValue!=""||indexValue!=0){
+               location.replace("http://localhost:8383/OracleJETv5/index.html?root=SalesContractApprovalStatus&indexValue="+indexValue);
+            }else{
+                alert("请选择合同");
+            }
+        });
+        
+    });
+</script>
